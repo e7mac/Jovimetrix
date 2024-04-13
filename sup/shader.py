@@ -81,7 +81,7 @@ class GLSL:
     def __init__(self, fragment:str, width:int=128, height:int=128, param:dict=None) -> None:
         # single initialize for all
         if GLSL.CTX is None:
-            GLSL.CTX = moderngl.create_context(standalone=True)
+            GLSL.CTX = moderngl.create_context(standalone=True, backend='egl')
             vertices = np.array([
                 -1.0, -1.0,
                 1.0, -1.0,
